@@ -1,0 +1,50 @@
+body {
+	background-color: #f2f2f2;
+	font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+h2 {
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.card {
+	background: #e6e6e6;
+	border: none;
+	border-radius: 12px;
+	padding: 1.5rem;
+}
+
+.btn-gray {
+	background: #6c757d;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	transition: 0.2s ease;
+}
+
+.btn-gray:hover {
+	background: #5a6268;
+}
+
+.table {
+	background: white;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.table thead {
+	background-color: #d9d9d9;
+}
+
+.table tbody tr:hover {
+	background-color: #ececec;
+}
+
+input.form-control {
+	border-radius: 8px;
+}
+
+.container {
+	max-width: 950px;
+}
