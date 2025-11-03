@@ -1,0 +1,13 @@
+package com.pm.demo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class PMejoramientoApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
