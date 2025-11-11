@@ -1,4 +1,4 @@
-package model;
+package com.pm.demo.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -9,10 +9,18 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+
+	@Column(nullable = false)
 	private String nombre;
+
+	@Column(nullable = false, unique = true)
 	private String email;
+
+	@Column(nullable = false)
 	private String password;
+
 	private String telefono;
+
 	private LocalDateTime fechaRegistro;
 
 	public Integer getId() {
@@ -62,7 +70,4 @@ public class Usuario {
 	public void setFechaRegistro(LocalDateTime fechaRegistro) {
 		this.fechaRegistro = fechaRegistro;
 	}
-
-	// Getters y Setters
-
 }

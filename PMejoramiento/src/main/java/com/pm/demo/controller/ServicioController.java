@@ -1,10 +1,11 @@
-package controller;
+package com.pm.demo.controller;
 
-import model.Servicio;
-import repository.ServicioRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import com.pm.demo.model.Servicio;
+import com.pm.demo.repository.ServicioRepository;
 
 @Controller
 @RequestMapping("/servicios")

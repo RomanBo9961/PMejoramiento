@@ -1,7 +1,7 @@
-package repository;
+package com.pm.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import model.Usuario;
+import com.pm.demo.model.Usuario;
 import java.util.Optional;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {

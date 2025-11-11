@@ -1,8 +1,10 @@
-package api;
+package com.pm.demo.api;
 
-import model.Profesional;
-import repository.ProfesionalRepository;
 import org.springframework.web.bind.annotation.*;
+
+import com.pm.demo.model.Profesional;
+import com.pm.demo.repository.ProfesionalRepository;
+
 import java.util.List;
 
 @RestController

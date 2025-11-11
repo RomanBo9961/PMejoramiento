@@ -1,8 +1,10 @@
-package api;
+package com.pm.demo.api;
 
-import model.Servicio;
-import repository.ServicioRepository;
 import org.springframework.web.bind.annotation.*;
+
+import com.pm.demo.model.Servicio;
+import com.pm.demo.repository.ServicioRepository;
+
 import java.util.List;
 
 @RestController

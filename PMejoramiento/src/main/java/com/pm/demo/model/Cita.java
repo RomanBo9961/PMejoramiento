@@ -1,4 +1,4 @@
-package model;
+package com.pm.demo.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

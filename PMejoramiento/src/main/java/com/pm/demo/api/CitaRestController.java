@@ -1,8 +1,10 @@
-package api;
+package com.pm.demo.api;
 
-import model.Cita;
-import repository.CitaRepository;
 import org.springframework.web.bind.annotation.*;
+
+import com.pm.demo.model.Cita;
+import com.pm.demo.repository.CitaRepository;
+
 import java.util.List;
 
 @RestController

@@ -1,7 +1,8 @@
-package repository;
+package com.pm.demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import model.Servicio;
+
+import com.pm.demo.model.Servicio;
 
 public interface ServicioRepository extends JpaRepository<Servicio, Integer> {
 }

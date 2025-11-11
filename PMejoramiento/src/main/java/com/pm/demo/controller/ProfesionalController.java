@@ -1,10 +1,10 @@
-package controller;
+package com.pm.demo.controller;
 
-import model.Profesional;
-import repository.ProfesionalRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import com.pm.demo.model.Profesional;
+import com.pm.demo.repository.ProfesionalRepository;
 
 @Controller
 @RequestMapping("/profesionales")
@@ -20,7 +20,7 @@ public class ProfesionalController {
 	public String listar(Model model) {
 		model.addAttribute("profesionales", repo.findAll());
 		model.addAttribute("nuevoProfesional", new Profesional());
-		return "profesionales/lista";
+		return "index";
 	}
 
 	@PostMapping("/guardar")

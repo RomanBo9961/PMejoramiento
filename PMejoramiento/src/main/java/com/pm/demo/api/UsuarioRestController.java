@@ -1,8 +1,10 @@
-package api;
+package com.pm.demo.api;
 
-import model.Usuario;
-import repository.UsuarioRepository;
 import org.springframework.web.bind.annotation.*;
+
+import com.pm.demo.model.Usuario;
+import com.pm.demo.repository.UsuarioRepository;
+
 import java.util.List;
 
 @RestController
