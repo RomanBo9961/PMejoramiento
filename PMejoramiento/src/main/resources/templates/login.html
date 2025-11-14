@@ -83,7 +83,7 @@
 		}
 
 		.btn-login {
-			background: #3f72af;
+			background: rgba(128, 128, 192, 0.7);
 			color: white;
 			border-radius: 10px;
 			border: none;
@@ -111,7 +111,7 @@
 			position: absolute;
 			top: 20px;
 			right: 20px;
-			background: rgba(255, 255, 255, 0.15);
+			background: rgba(255, 255, 255, 0.3);
 			border: none;
 			color: #fff;
 			padding: 10px;
@@ -132,11 +132,11 @@
 		}
 
 		body.light-mode .overlay {
-			background: rgba(255, 255, 255, 0.7);
+			background: rgba(255, 255, 255, 0.3);
 		}
 
 		body.light-mode .login-card {
-			background: rgba(255, 255, 255, 0.85);
+			background: rgba(255, 255, 255, 0.05);
 			color: #1a1a1a;
 			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 		}
@@ -147,7 +147,7 @@
 		}
 
 		body.light-mode .btn-login {
-			background: #4a628a;
+			background: rgba(64, 128, 128, 0.6);
 		}
 
 		body.light-mode .btn-login:hover {
@@ -159,7 +159,7 @@
 <body>
 	<!-- VIDEO DE FONDO -->
 	<video autoplay muted loop id="bg-video">
-		<source src="https://cdn.pixabay.com/video/2023/03/16/155028-813918363_large.mp4" type="video/mp4">
+		<source src="https://videos.pexels.com/video-files/34645139/14683902_2560_1440_30fps.mp4" type="video/mp4">
 	</video>
 
 	<div class="overlay"></div>
@@ -186,8 +186,9 @@
 					<i class="bi bi-box-arrow-in-right me-1"></i> Iniciar Sesión
 				</button>
 
-				<p class="text-muted mb-0">
-					¿No tienes cuenta? <a th:href="@{/registro}">Regístrate aquí</a>
+				<p class="mb-4">
+					¿No tienes cuenta? <a th:href="@{/registro}" style="color: rgb(255, 255, 255);"><Strong>Regístrate
+							aquí</Strong></a>
 				</p>
 			</form>
 
