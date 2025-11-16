@@ -20,7 +20,7 @@ public class ProfesionalController {
 	public String listar(Model model) {
 		model.addAttribute("profesionales", repo.findAll());
 		model.addAttribute("nuevoProfesional", new Profesional());
-		return "index";
+		return "profesionales/lista";
 	}
 
 	@PostMapping("/guardar")

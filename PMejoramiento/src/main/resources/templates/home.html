@@ -1,64 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Inicio - Sistema</title>
+	<title>Inicio - Aszesco</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 
-<body class="p-5">
-	<div class="container">
-		<div class="text-center mb-5">
-			<h1>Bienvenido al Sistema</h1>
-			<p class="lead">Sistema de gestión integral</p>
+<body class="home-body">
+
+	<!-- FONDO PROFESIONAL CON IMAGEN -->
+	<div class="home-bg-pro"></div>
+	<div class="home-overlay-pro"></div>
+
+	<!-- NAV SUPERIOR MEJORADO -->
+	<nav class="home-navbar">
+		<div class="container">
+			<div class="home-navbar-brand">
+				<i class="bi bi-person-badge"></i>
+				<span>Aszesco</span>
+			</div>
+
+			<div class="d-flex align-items-center gap-3">
+				<!-- BOTÓN TEMA DÍA/NOCHE -->
+				<button class="home-theme-toggle" id="themeToggle" title="Cambiar tema">
+					<i class="bi bi-moon-stars-fill"></i>
+				</button>
+
+				<div class="home-navbar-user">
+					<i class="bi bi-person-circle"></i>
+					<span>Administrador en Linea</span>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- CONTENEDOR PRINCIPAL -->
+	<div class="home-main-wrapper-pro">
+		<div class="container home-container-pro">
+
+			<!-- HEADER MEJORADO -->
+			<div class="text-center mb-5 home-header-pro">
+				<div class="home-badge">Sistema Integrado</div>
+				<h1 class="home-title-pro">Panel de Control</h1>
+				<p class="home-subtitle-pro">Administra todos los módulos del sistema desde un solo lugar</p>
+			</div>
+
+			<!-- TARJETAS MEJORADAS -->
+			<div class="row g-4 justify-content-center home-cards-grid">
+
+				<div class="col-xl-3 col-lg-4 col-md-6">
+					<div class="home-card-pro">
+						<div class="home-card-icon-wrapper">
+							<i class="bi bi-people-fill home-icon-pro"></i>
+						</div>
+						<h5 class="home-card-title-pro">Gestión de Usuarios</h5>
+						<p class="home-card-text-pro">Administra perfiles, permisos y accesos del sistema.</p>
+						<div class="home-card-stats">
+							<span class="home-stat"><i class="bi bi-person"></i> 150+ usuarios</span>
+						</div>
+						<a href="/usuarios" class="btn home-btn-pro">
+							<i class="bi bi-arrow-right"></i> Acceder
+						</a>
+					</div>
+				</div>
+
+				<div class="col-xl-3 col-lg-4 col-md-6">
+					<div class="home-card-pro">
+						<div class="home-card-icon-wrapper">
+							<i class="bi bi-person-workspace home-icon-pro"></i>
+						</div>
+						<h5 class="home-card-title-pro">Profesionales</h5>
+						<p class="home-card-text-pro">Gestiona el talento especializado y sus especialidades.</p>
+						<div class="home-card-stats">
+							<span class="home-stat"><i class="bi bi-briefcase"></i> 45 profesionales</span>
+						</div>
+						<a href="/profesionales" class="btn home-btn-pro">
+							<i class="bi bi-arrow-right"></i> Acceder
+						</a>
+					</div>
+				</div>
+
+				<div class="col-xl-3 col-lg-4 col-md-6">
+					<div class="home-card-pro">
+						<div class="home-card-icon-wrapper">
+							<i class="bi bi-gear-fill home-icon-pro"></i>
+						</div>
+						<h5 class="home-card-title-pro">Servicios</h5>
+						<p class="home-card-text-pro">Configura y mantiene los servicios ofrecidos.</p>
+						<div class="home-card-stats">
+							<span class="home-stat"><i class="bi bi-list-check"></i> 28 servicios</span>
+						</div>
+						<a href="/servicios" class="btn home-btn-pro">
+							<i class="bi bi-arrow-right"></i> Acceder
+						</a>
+					</div>
+				</div>
+
+				<div class="col-xl-3 col-lg-4 col-md-6">
+					<div class="home-card-pro">
+						<div class="home-card-icon-wrapper">
+							<i class="bi bi-calendar-check-fill home-icon-pro"></i>
+						</div>
+						<h5 class="home-card-title-pro">Gestión de Citas</h5>
+						<p class="home-card-text-pro">Organiza y administra las citas programadas.</p>
+						<div class="home-card-stats">
+							<span class="home-stat"><i class="bi bi-clock"></i> 12 pendientes</span>
+						</div>
+						<a href="/citas" class="btn home-btn-pro">
+							<i class="bi bi-arrow-right"></i> Acceder
+						</a>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- ESTADÍSTICAS RÁPIDAS -->
+			<div class="home-quick-stats">
+				<div class="row g-3 justify-content-center">
+					<div class="col-md-3">
+						<div class="home-stat-card">
+							<i class="bi bi-people"></i>
+							<div class="home-stat-content">
+								<h3>195</h3>
+								<p>Usuarios Totales</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="home-stat-card">
+							<i class="bi bi-calendar-week"></i>
+							<div class="home-stat-content">
+								<h3>12</h3>
+								<p>Citas Hoy</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="home-stat-card">
+							<i class="bi bi-check-circle"></i>
+							<div class="home-stat-content">
+								<h3>89%</h3>
+								<p>Eficiencia</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- LOGOUT MEJORADO -->
+			<div class="text-center mt-5 home-logout-section">
+				<form th:action="@{/logout}" method="post">
+					<button type="submit" class="btn logout-btn-pro">
+						<i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+					</button>
+				</form>
+			</div>
+
 		</div>
 
-		<div class="row justify-content-center">
-			<div class="col-md-3 mb-3">
-				<div class="card text-center">
-					<div class="card-body">
-						<h5 class="card-title">Gestión de Usuarios</h5>
-						<p class="card-text">Administrar usuarios del sistema</p>
-						<a href="/usuarios" class="btn btn-primary">Ir a Usuarios</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 mb-3">
-				<div class="card text-center">
-					<div class="card-body">
-						<h5 class="card-title">Gestión de Profesionales</h5>
-						<p class="card-text">Administrar profesionales</p>
-						<a href="/profesionales" class="btn btn-primary">Ir a Profesionales</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 mb-3">
-				<div class="card text-center">
-					<div class="card-body">
-						<h5 class="card-title">Gestión de Servicios</h5>
-						<p class="card-text">Administrar servicios</p>
-						<a href="/servicios" class="btn btn-primary">Ir a Servicios</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 mb-3">
-				<div class="card text-center">
-					<div class="card-body">
-						<h5 class="card-title">Gestión de Citas</h5>
-						<p class="card-text">Administrar citas</p>
-						<a href="/citas" class="btn btn-primary">Ir a Citas</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="text-center mt-4">
-			<form th:action="@{/logout}" method="post">
-				<button type="submit" class="btn btn-outline-secondary">Cerrar Sesión</button>
-			</form>
-		</div>
+		<!-- FOOTER -->
+		<div th:replace="fragments/footer :: aszFooter"></div>
 	</div>
+
+	<script>
+		// ====== MODO DÍA / NOCHE PARA HOME ======
+		const toggle = document.getElementById('themeToggle');
+		const icon = toggle.querySelector('i');
+		const body = document.body;
+
+		// Guardar modo en localStorage
+		if (localStorage.getItem('homeTheme') === 'light') {
+			body.classList.add('light-mode');
+			icon.classList.replace('bi-moon-stars-fill', 'bi-brightness-high-fill');
+		}
+
+		toggle.addEventListener('click', () => {
+			body.classList.toggle('light-mode');
+			if (body.classList.contains('light-mode')) {
+				icon.classList.replace('bi-moon-stars-fill', 'bi-brightness-high-fill');
+				localStorage.setItem('homeTheme', 'light');
+			} else {
+				icon.classList.replace('bi-brightness-high-fill', 'bi-moon-stars-fill');
+				localStorage.setItem('homeTheme', 'dark');
+			}
+		});
+	</script>
+
 </body>
 
 </html>
