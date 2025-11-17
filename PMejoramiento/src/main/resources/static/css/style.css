@@ -917,7 +917,7 @@ input.form-control {
 	}
 }
 
-/* ====== ESTILOS UNIFICADOS PARA CRUD ====== */
+/* ====== estilos CRUD ====== */
 .crud-body {
 	position: relative;
 	min-height: 100vh;
@@ -1014,7 +1014,7 @@ input.form-control {
 
 /* Tablas CRUD */
 .crud-table {
-	background: rgba(255, 255, 255, 0.05);
+	background: rgb(128, 128, 192);
 	backdrop-filter: blur(10px);
 	border-radius: 12px;
 	overflow: hidden;
@@ -1241,4 +1241,171 @@ input.form-control {
 	.crud-table {
 		font-size: 0.9rem;
 	}
+}
+
+/* tabla MUESTRA registros */
+.crud-table {
+	background: rgba(30, 30, 40, 0.95) !important;
+	backdrop-filter: blur(15px);
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.15) !important;
+	color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.crud-table-header {
+	background: rgba(128, 128, 64, 0.3) !important;
+	color: #c0c080 !important;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+	font-weight: 600;
+	padding: 16px 12px;
+	text-align: center;
+}
+
+.crud-table-row {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+}
+
+.crud-table-row:hover {
+	background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.crud-table-cell {
+	padding: 14px 12px;
+	vertical-align: middle;
+	border: none;
+	color: rgb(0, 0, 0) !important;
+	text-align: center;
+}
+
+.crud-table {
+	background: rgba(40, 40, 50, 0.95) !important;
+	backdrop-filter: blur(15px);
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.crud-table-cell span,
+.crud-table-cell div {
+	color: #ffffff !important;
+}
+
+/* Asegurar que el texto de los badges sea visible */
+.crud-badge {
+	color: #ffffff !important;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 6px 12px;
+	border-radius: 20px;
+	font-weight: 500;
+}
+
+/* contraste de íconos */
+.crud-table-cell .fa-user,
+.crud-table-cell .fa-edit,
+.crud-table-cell .fa-trash {
+	color: #c0c080 !important;
+}
+
+/* textos CELDA  */
+.crud-card .text-light {
+	color: #ffffff !important;
+}
+
+.crud-form-control {
+	background: rgba(255, 255, 255, 0.1) !important;
+	border: 1px solid rgba(255, 255, 255, 0.2) !important;
+	color: #ffffff !important;
+}
+
+.crud-form-control::placeholder {
+	color: #cccccc !important;
+}
+
+/* Mejorar contraste de los botones */
+.crud-btn-outline {
+	color: #c0c080 !important;
+	border-color: #c0c080 !important;
+}
+
+.crud-btn-outline:hover {
+	background: #c0c080 !important;
+	color: #1a1a1a !important;
+}
+
+.btn-outline-danger {
+	color: #ff6b6b !important;
+	border-color: #ff6b6b !important;
+}
+
+.btn-outline-danger:hover {
+	background: #ff6b6b !important;
+	color: #1a1a1a !important;
+}
+
+/* Mejorar contraste de los títulos */
+.crud-title {
+	color: #c0c080 !important;
+	text-shadow: 0 0 10px rgba(192, 192, 128, 0.5) !important;
+}
+
+.crud-subtitle {
+	color: #e0e0e0 !important;
+}
+
+/* Asegurar que los textos en las cards sean visibles */
+.crud-card h4 {
+	color: #ffffff !important;
+}
+
+.crud-card .form-label {
+	color: #ffffff !important;
+}
+
+/* ====== MODO CLARO MEJORADO ====== */
+.crud-body.light-mode .crud-overlay {
+	background: rgba(230, 230, 240, 0.85) !important;
+}
+
+.crud-body.light-mode .crud-table {
+	background: rgba(255, 255, 255, 0.95) !important;
+	border: 1px solid rgba(128, 128, 64, 0.2) !important;
+	color: #333 !important;
+}
+
+.crud-body.light-mode .crud-table-header {
+	background: rgba(128, 128, 64, 0.15) !important;
+	color: #606030 !important;
+	border-bottom: 1px solid rgba(128, 128, 64, 0.2) !important;
+}
+
+.crud-body.light-mode .crud-table-cell {
+	color: #444 !important;
+}
+
+.crud-body.light-mode .crud-table-row:hover {
+	background: rgba(128, 128, 64, 0.08) !important;
+}
+
+.crud-body.light-mode .crud-card {
+	background: rgba(255, 255, 255, 0.9) !important;
+	border: 1px solid rgba(128, 128, 64, 0.2) !important;
+}
+
+.crud-body.light-mode .crud-form-control {
+	background: rgba(255, 255, 255, 0.95) !important;
+	border: 1px solid rgba(128, 128, 64, 0.25) !important;
+	color: #333 !important;
+}
+
+.crud-body.light-mode .crud-form-control:focus {
+	background: #fff !important;
+	border-color: #808040 !important;
+}
+
+/*badges modo dia */
+.crud-body.light-mode .crud-badge {
+	background: rgba(128, 128, 64, 0.1) !important;
+	border: 1px solid rgba(128, 128, 64, 0.3) !important;
+	color: #606030 !important;
 }

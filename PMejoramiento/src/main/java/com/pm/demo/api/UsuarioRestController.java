@@ -1,10 +1,13 @@
 package com.pm.demo.api;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.pm.demo.model.Usuario;
 import com.pm.demo.repository.UsuarioRepository;
 
+import jakarta.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -17,28 +20,38 @@ public class UsuarioRestController {
 	}
 
 	@GetMapping
-	public List<Usuario> listar() {
-		return repo.findAll();
+	public ResponseEntity<List<Usuario>> listar() {
+		List<Usuario> usuarios = repo.findAll();
+		return ResponseEntity.ok(usuarios);
 	}
 
 	@PostMapping
-	public Usuario crear(@RequestBody Usuario u) {
-		return repo.save(u);
+	public ResponseEntity<Usuario> crear(@Valid @RequestBody Usuario u) {
+		Usuario saved = repo.save(u);
+		return ResponseEntity.status(HttpStatus.CREATED).body(saved);
 	}
 
 	@GetMapping("/{id}")
-	public Usuario obtener(@PathVariable Integer id) {
-		return repo.findById(id).orElse(null);
+	public ResponseEntity<Usuario> obtener(@PathVariable Integer id) {
+		return repo.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
 	}
 
 	@PutMapping("/{id}")
-	public Usuario actualizar(@PathVariable Integer id, @RequestBody Usuario u) {
+	public ResponseEntity<Usuario> actualizar(@PathVariable Integer id, @Valid @RequestBody Usuario u) {
+		if (!repo.existsById(id)) {
+			return ResponseEntity.notFound().build();
+		}
 		u.setId(id);
-		return repo.save(u);
+		Usuario updated = repo.save(u);
+		return ResponseEntity.ok(updated);
 	}
 
 	@DeleteMapping("/{id}")
-	public void eliminar(@PathVariable Integer id) {
+	public ResponseEntity<Void> eliminar(@PathVariable Integer id) {
+		if (!repo.existsById(id)) {
+			return ResponseEntity.notFound().build();
+		}
 		repo.deleteById(id);
+		return ResponseEntity.noContent().build();
 	}
 }
