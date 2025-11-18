@@ -456,7 +456,7 @@ input.form-control {
 	color: #ffffc8;
 	border-color: rgba(192, 192, 128, 0.5);
 	transform: translateY(-2px);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 15px rgb(128, 128, 64);
 }
 
 /* CONTENIDO HOME */
@@ -632,7 +632,7 @@ input.form-control {
 .home-btn-pro:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 10px 25px #808000;
-	color: #0a0a0f;
+	color: rgb(0, 0, 0);
 }
 
 /* ESTADÍSTICAS HOME */
@@ -803,18 +803,6 @@ input.form-control {
 
 .home-body.light-mode .home-card-text-pro {
 	color: #666;
-}
-
-.home-body.light-mode .home-card-pro:hover {
-	border-color: rgba(128, 128, 64, 0.4);
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 60px rgba(128, 128, 64, 0.1);
-}
-
-.home-body.light-mode .home-icon-pro {
-	background: linear-gradient(135deg, #606030, #808040);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
 }
 
 .home-body.light-mode .home-card-icon-wrapper {
@@ -1287,12 +1275,12 @@ input.form-control {
 
 .crud-table-cell span,
 .crud-table-cell div {
-	color: #ffffff !important;
+	color: rgb(128, 128, 128) !important;
 }
 
 /* Asegurar que el texto de los badges sea visible */
 .crud-badge {
-	color: #ffffff !important;
+	color: rgb(128, 128, 128) !important;
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	padding: 6px 12px;
@@ -1309,7 +1297,7 @@ input.form-control {
 
 /* textos CELDA  */
 .crud-card .text-light {
-	color: #ffffff !important;
+	color: rgb(128, 128, 128) !important;
 }
 
 .crud-form-control {
@@ -1333,16 +1321,6 @@ input.form-control {
 	color: #1a1a1a !important;
 }
 
-.btn-outline-danger {
-	color: #ff6b6b !important;
-	border-color: #ff6b6b !important;
-}
-
-.btn-outline-danger:hover {
-	background: #ff6b6b !important;
-	color: #1a1a1a !important;
-}
-
 /* Mejorar contraste de los títulos */
 .crud-title {
 	color: #c0c080 !important;
@@ -1350,16 +1328,16 @@ input.form-control {
 }
 
 .crud-subtitle {
-	color: #e0e0e0 !important;
+	color: rgb(128, 128, 128) !important;
 }
 
 /* Asegurar que los textos en las cards sean visibles */
 .crud-card h4 {
-	color: #ffffff !important;
+	color: rgb(128, 128, 128) !important;
 }
 
 .crud-card .form-label {
-	color: #ffffff !important;
+	color: rgb(128, 128, 128) !important;
 }
 
 /* ====== MODO CLARO MEJORADO ====== */
@@ -1380,7 +1358,7 @@ input.form-control {
 }
 
 .crud-body.light-mode .crud-table-cell {
-	color: #444 !important;
+	color: rgb(128, 128, 128) !important;
 }
 
 .crud-body.light-mode .crud-table-row:hover {
@@ -1404,8 +1382,44 @@ input.form-control {
 }
 
 /*badges modo dia */
-.crud-body.light-mode .crud-badge {
-	background: rgba(128, 128, 64, 0.1) !important;
-	border: 1px solid rgba(128, 128, 64, 0.3) !important;
-	color: #606030 !important;
+
+.crud-body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.crud-container {
+	flex: 1;
+}
+
+.crud-form-control {
+	color: white !important;
+}
+
+
+.crud-table-cell {
+	color: rgb(128, 128, 128) !important;
+}
+
+.btn-outline-danger {
+	color: #ff6b6b !important;
+	border-color: #ff6b6b !important;
+}
+
+.btn-outline-danger:hover {
+	background: #ff6b6b !important;
+	color: #1a1a1a !important;
+}
+
+.home-body.light-mode .home-card-pro:hover {
+	border-color: rgba(128, 128, 64, 0.4);
+	box-shadow: 0 20px 40px rgb(128, 128, 64), 0 0 60px rgba(128, 128, 64, 0.1);
+}
+
+.home-body.light-mode .home-icon-pro {
+	background: linear-gradient(135deg, #606030, #808040);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
 }
